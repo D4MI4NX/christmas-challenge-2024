@@ -32,7 +32,7 @@ func main() {
 
 	router := gin.Default()
 
-	router.Static("/home", "./webroot")
+	router.Static("/static", "../frontend/dist/browser")
 
 	router.RunTLS(fmt.Sprintf("%s:%d", o.Address, o.Port), o.CertificatePath, o.PrivateKeyPath)
 }
